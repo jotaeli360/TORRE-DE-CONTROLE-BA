@@ -442,10 +442,10 @@
     <script src="https://cdn.jsdelivr.net/npm/tone@14.7.77/build/Tone.min.js"></script>
     <script>
         const scales = {
-            'A': { baseDate: '2026-04-17T00:00:00', name: 'Joyceanne', fixedShift: '00-08' },
+            'A': { baseDate: '2026-04-17T00:00:00', name: '--', fixedShift: '00-08' },
             'B': { baseDate: '2026-04-19T00:00:00', name: 'Etiene', fixedShift: '08-16' },
             'C': { baseDate: '2026-04-21T00:00:00', name: 'Viviani', fixedShift: '16-00' },
-            'F': { baseDate: '2026-04-23T00:00:00', name: 'Igor', fixedShift: null }
+            'F': { baseDate: '2026-04-23T00:00:00', name: '--', fixedShift: null }
         };
 
         const CYCLE_LENGTH_DAYS = 08;
@@ -463,7 +463,8 @@
             { id: 'std-4', text: 'Troca de Turno (Saída)', description: 'Realizar passagem de turno para a próxima equipe.', alarmTime: '07:50', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['00-08'] },
             { id: 'std-5', text: 'Troca de Turno (Saída)', description: 'Realizar passagem de turno para a próxima equipe.', alarmTime: '15:50', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['08-16'] },
             { id: 'std-6', text: 'Troca de Turno (Saída)', description: 'Realizar passagem de turno para a próxima equipe.', alarmTime: '23:50', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['16-00'] },
-            { id: 'std-7', text: 'N1 - Análise de Performance Diária', description: 'Um encontro para revisar os números de ontem: Verificar as metas de árvores abertas e tempo de atuação, identificar o que impactou nossa operação e definir os próximos passos para otimizar nosso desempenho.', alarmTime: '10:28', daysOfWeek: [1,2,3,4,5], shifts: ['08-16'] },
+            { id: 'std-7', text: 'N1 - Análise de Performance Diária', description: 'Um encontro para revisar os números de ontem: Verificar as metas de árvores abertas e tempo de atuação, identificar o que impactou nossa operação e definir os próximos passos para otimizar nosso desempenho.', alarmTime: '09:28', daysOfWeek: [3,5], shifts: ['08-16'] },
+            { id: 'std-7.1', text: 'N1 - Análise de Performance Diária', description: 'Um encontro para revisar os números de ontem: Verificar as metas de árvores abertas e tempo de atuação, identificar o que impactou nossa operação e definir os próximos passos para otimizar nosso desempenho.', alarmTime: '14:28', daysOfWeek: [1], shifts: ['08-16'] },
             { id: 'std-08', text: 'Atualizar os Painéis da Torre', description: 'Manter as telas atualizadas e organizadas durante todo turno.', alarmTime: '00:07', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['00-08'] },
             { id: 'std-09', text: 'Atualizar os Painéis da Torre', description: 'Manter as telas atualizadas e organizadas durante todo turno.', alarmTime: '08:07', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['08-16'] },
             { id: 'std-10', text: 'Atualizar os Painéis da Torre', description: 'Manter as telas atualizadas e organizadas durante todo turno.', alarmTime: '16:07', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['16-00'] },
@@ -482,7 +483,7 @@
             { id: 'std-23', text: 'Enviar PBTC', description: 'Enviar Print do PBTC de cada Frente de carregamento (incluir cabeçalho).', alarmTime: '16:20', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['16-00'] },
             { id: 'std-24', text: 'Enviar PBTC +  Análise Volume de frentes com baixa aderência', description: 'Enviar Print do PBTC de cada Frente de carregamento (incluir cabeçalho) e enviar nos respectivos grupos de Whatsapp marcando o Técnico Suzano responsável e o Encarregado de Campo presente no turno para aquela frente + Printar qual a frente está com aderência abaixo de 80% do Ritmo e enviar.', alarmTime: '19:20', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['16-00'] },
             { id: 'std-25', text: 'Enviar PBTC', description: 'Enviar Print do PBTC de cada Frente de carregamento (incluir cabeçalho).', alarmTime: '22:20', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['16-00'] },
-            { id: 'std-26', text: 'HighLight Operacional BA', description: 'Envio do arquivo em PDF no grupo alta gestão.', alarmTime: '10:15', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['08-16'] },
+            { id: 'std-26', text: 'HighLight Operacional BA', description: 'Envio do arquivo em PDF no grupo alta gestão.', alarmTime: '10:15', daysOfWeek: [], shifts: ['08-16'] },
             { id: 'std-27', text: 'NOVO T2 + REPORT - STATUS DE GRUAS E BALANÇA', description: 'Identificando as frentes de carregamento, enviar juntamente com o template nos grupos operacionais', alarmTime: '00:20', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['00-08'] },
             { id: 'std-28', text: 'NOVO T2 + REPORT - STATUS DE GRUAS E BALANÇA', description: 'Identificando as frentes de carregamento, enviar juntamente com o template nos grupos operacionais', alarmTime: '04:05', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['00-08'] },
             { id: 'std-29', text: 'NOVO T2 + REPORT - STATUS DE GRUAS E BALANÇA', description: 'Identificando as frentes de carregamento, enviar juntamente com o template nos grupos operacionais', alarmTime: '08:45', daysOfWeek: [0,1,2,3,4,5,6], shifts: ['08-16'] },
